@@ -1,0 +1,79 @@
+/* Reset & Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header & Navigation (Flexbox) */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex; /* Flexbox for horizontal nav */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 1rem; /* Spacing between nav items */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* About Section (Flexbox) */
+.about-content {
+    display: flex; /* Flexbox for image + text */
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.about img {
+    border-radius: 50%;
+    border: 3px solid #333;
+}
+
+/* Skills Section (CSS Grid) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3-column grid */
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.skill-item {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .about-content {
+        flex-direction: column; /* Stack on small screens */
+    }
+    .skills-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
